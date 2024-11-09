@@ -96,6 +96,7 @@ class Candy {
     if (this.y > height + this.s / 2) {
       this.y = -this.s / 2;
     }
+
   }
   checkOutOfCanvas() {
     if (this.x > width + this.s) {
@@ -103,5 +104,9 @@ class Candy {
       this.isGone = true;
     }
   }
-
+}
+function mousePressed() {
+  let i = floor(random(candy.length));
+  candy[i].x = mouseX;
+  candy[i].y = mouseY;
 }
